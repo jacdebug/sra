@@ -10,11 +10,17 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src1={logo} className="App-logo" alt="logo" />
         </div>
         <div className="App-intro">
           <Route exact path="/" component={Home} />
-          <Route path="/files/:index" component={FilesContainer} />
+          {
+            [
+                '/files/page/:pageId',
+                '/files/page/:pageId/sort/:sortby/order/:order',
+                '/files/search/:attr/like/:query'
+            ].map( url => <Route path={url} component={FilesContainer} /> )
+          }
         </div>
       </div>
     );
@@ -22,3 +28,13 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+/*
+[
+    '/files/page/:pageId',
+    '/files/page/:pageId/sort/:sortby/order/:order',
+    '/files/search/:attr/like/:query'
+]
+*/

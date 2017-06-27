@@ -6,7 +6,7 @@ import { fetchAllFiles } from '../actions';
 const mapDispatchToProps = dispatch => ({
   fetchAllFiles: () => {
     dispatch(fetchAllFiles());
-  },
+  }
 });
 
 const mapStateToProps = (state) => ({
@@ -16,7 +16,6 @@ const mapStateToProps = (state) => ({
 class FilesContainer extends React.Component {
   componentWillMount() {
       this.props.fetchAllFiles();
-    
   }
   render() {
     return <Files {...this.props} />;
