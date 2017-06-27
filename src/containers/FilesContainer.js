@@ -9,16 +9,19 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
+const mapStateToProps = (state) => ({
+  files: state.rootReducer.files.filesVisibleId.map(id => state.rootReducer.entities.files[id])
+});
+
 class FilesContainer extends React.Component {
   componentWillMount() {
       this.props.fetchAllFiles();
     
   }
-
   render() {
     return <Files {...this.props} />;
   }
 }
 
 
-export default connect(null, mapDispatchToProps)(FilesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FilesContainer);

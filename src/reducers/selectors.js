@@ -1,1 +1,1 @@
-export const getFile = (state, login) => state.entities.users[login]
+export const getFiles = (state, login) => state.entities.users[login]

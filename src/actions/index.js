@@ -26,4 +26,4 @@ export const LOAD_FILES_PAGE = 'LOAD_FILES_PAGE';
 export const loadFilesPage = () => action(LOAD_FILES_PAGE)
 
 
-export const fetchAllFiles = () => ({ type: 'FETCH_FI'})
+export const fetchAllFiles = () => ({ type: 'FETCH_FILES'})

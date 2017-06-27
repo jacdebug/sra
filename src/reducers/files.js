@@ -1,9 +1,7 @@
-
-
-const files = (state = {}, action) => {
+const files = (state = { filesVisibleId: [] }, action) => {
   switch (action.type) {
-    case 'RECEIVE_FI':
-      return {...action.data.response};
+    case 'RECEIVE_FILES':
+      return Object.assign({}, state, { filesVisibleId: action.response.result })
     default:
       return state;
   }

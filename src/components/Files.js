@@ -1,5 +1,16 @@
 import React from 'react';
 
-const Files = () => <div>files</div>;
+const Files = ({ files }) => 
+    <div>
+
+        {
+            files.map(file => (
+                <div>
+                    {file.name}
+                </div>
+            ))
+        }
+
+    </div>;
 
 export default Files;
