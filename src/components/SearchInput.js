@@ -7,6 +7,7 @@ const SearchInput = ({ searchTerm, searchKeyPress }) =>
     placeholder="Seach by file name... "
     value={searchTerm}
     onKeyPress={searchKeyPress}
+    onChange={searchKeyPress}
   />;
 
 export const StyledInput = styled.input`padding: 5px;`;
