@@ -1,13 +1,14 @@
-import { call, put, fork, take, takeEvery, takeLatest, all } from 'redux-saga/effects'
-import api from '../services'
+import { call, put, fork, takeLatest, all } from 'redux-saga/effects';
 
-function* fetchFiles() {
-   try {
-      const { response, error } = yield call(api.fetchFiles, '/files');
-      yield put({type: "RECEIVE_FILES", response });
-   } catch (e) {
-      yield put({type: "FETCH_FILES_FAILED", message: e.message});
-   }
+import api from '../services';
+
+function* fetchFiles(payload) {
+  try {
+    const { response } = yield call(api.fetchFiles, payload);
+    yield put({ type: 'RECEIVE_FILES', response });
+  } catch (e) {
+    yield put({ type: 'FETCH_FILES_FAILED', message: e.message });
+  }
 }
 
 function* watchLoadFiles() {
@@ -15,7 +16,5 @@ function* watchLoadFiles() {
 }
 
 export default function* root() {
-  yield all([
-    fork(watchLoadFiles)
-  ])
+  yield all([fork(watchLoadFiles)]);
 }

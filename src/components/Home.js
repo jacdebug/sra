@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Home = () => <Link to="/files/1">My Files</Link>
+const Home = () => <NavLink to="/files/list/1">My Files</NavLink>;
 
 export default Home;

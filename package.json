@@ -6,10 +6,10 @@
     "babel-plugin-lodash": "^3.2.11",
     "normalizr": "^3.2.3",
     "parse-link-header": "^1.0.1",
+    "prettier": "^1.5.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1",
-    "redux-saga-router": "^2.1.0"
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -59,7 +59,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "pretty": "prettier --single-quote --trailing-comma es5 --write \"{src,app,__{tests,mocks}__}/**/*.js\""
   },
   "jest": {
     "collectCoverageFrom": [
