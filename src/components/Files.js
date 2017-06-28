@@ -83,18 +83,22 @@ const renderPaginationLink = (link, index) =>
 
 const Files = ({ files, paginationLinks, history }) =>
   <div>
-
     <Link to="/files/search/name/gif/1">
       {' '}name like <gif />{' '}
     </Link>
     <p />
 
     <Container>
-      <input type="text" style={{'padding': '5px'}} placeholder="Seach by file name... " onKeyPress={(e) => {
-    if (e.key === 'Enter') {
-      history.push(`/files/search/name/${e.currentTarget.value}/1`)
-    }
-  }} />
+      <input
+        type="text"
+        style={{ padding: '5px' }}
+        placeholder="Seach by file name... "
+        onKeyPress={e => {
+          if (e.key === 'Enter') {
+            history.push(`/files/search/name/${e.currentTarget.value}/1`);
+          }
+        }}
+      />
 
       <p />
 
@@ -105,9 +109,12 @@ const Files = ({ files, paginationLinks, history }) =>
 
         <div style={{ marginTop: '4px' }}>
           <label htmlFor="sort-select">Sort by: </label>
-          <select id="sort-select" onChange={e=> {
-              history.push(`/files/sort/${e.currentTarget.value}/asc/1`)
-            }}>
+          <select
+            id="sort-select"
+            onChange={e => {
+              history.push(`/files/sort/${e.currentTarget.value}/asc/1`);
+            }}
+          >
             <option value="id">Id</option>
             <option value="name">Name</option>
             <option value="size">Size</option>
