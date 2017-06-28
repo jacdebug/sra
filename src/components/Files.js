@@ -8,7 +8,9 @@ const renderPaginationLink = (link, index) =>
 
 const Files = ({ files, paginationLinks }) =>
   <div>
-    <Link to="/files/search/name/git/1"> name like git </Link>
+    <Link to="/files/search/name/gif/1">
+      {' '}name like <gif />{' '}
+    </Link>
     <p />
     <Link to="/files/sort/name/asc/1"> sort by name asc </Link> |
     <Link to="/files/sort/name/desc/1"> sort by name desc </Link>
