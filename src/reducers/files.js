@@ -1,23 +1,25 @@
-import { responseLinksToRouteUrl } from '../helpers/url';
-
 const generatePaginationLinksData = links =>
-  ['first', 'prev', 'next', 'last'].map(type => ({
-    type,
-    isEnabled: !!links[type],
-    url: links[type] ? responseLinksToRouteUrl(links[type]) : '#',
-  }));
+  ['first', 'prev', 'next', 'last'].map(type => {
+    let linkData = (links && links[type]) || null;
 
-const files = (
-  state = { files: [], links: {}, paginationLinks: [] },
-  action
-) => {
+    return {
+      type,
+      isEnabled: !!linkData,
+      queryString: `?${linkData ? linkData.url.split('?')[1] : ''}`,
+      linkData,
+    };
+  });
+
+const files = (state = { files: [], paginationLinks: [] }, action) => {
   switch (action.type) {
     case 'RECEIVE_FILES':
-      let paginationLinks =
-        (action.response.links &&
-          generatePaginationLinksData(action.response.links)) ||
-        [];
-      return Object.assign({}, state, action.response, { paginationLinks });
+      let paginationLinks = generatePaginationLinksData(action.response.links);
+      return Object.assign(
+        {},
+        state,
+        { files: action.response.files },
+        { paginationLinks }
+      );
     default:
       return state;
   }

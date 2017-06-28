@@ -3,7 +3,7 @@ import parse from 'parse-link-header';
 const API_ROOT = 'http://localhost:3003/files';
 
 function callApi(payload) {
-  const fullUrl = `${API_ROOT}?${payload.payload.params}`;
+  const fullUrl = API_ROOT + (payload.payload.params || '?_page=1');
 
   return fetch(fullUrl)
     .then(response => response.json().then(json => ({ json, response })))

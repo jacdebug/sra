@@ -14,7 +14,7 @@ const App = () => {
       <Router>
         <div className="App">
           <div className="App-header">
-            <img src1={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="App-logo" alt="logo" />
           </div>
 
           <div className="App-intro">
