@@ -4,19 +4,19 @@ import styled from 'styled-components';
 const SortbySelect = ({ sortBy, sortOnChange }) =>
   <Container>
     <label htmlFor="sort-select">Sort by: </label>
-    <select id="sort-select" onChange={sortOnChange}>
+    <select id="sort-select" value={sortBy} onChange={sortOnChange}>
       {[
         { id: 'id', label: 'Id' },
         { id: 'name', label: 'Name' },
         { id: 'size', label: 'Size' },
         { id: 'ext', label: 'Ext' },
         { id: 'created', label: 'Created' },
-      ].map(ele => {
-        return sortBy === ele.id
-          ? <option selected value={ele.id}>
+      ].map((ele, index) => {
+        return false
+          ? <option key={index} selected value={ele.id}>
               {ele.label}
             </option>
-          : <option value={ele.id}>
+          : <option key={index} value={ele.id}>
               {ele.label}
             </option>;
       })}

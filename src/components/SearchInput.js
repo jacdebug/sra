@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SearchInput = ({ searchTerm, searchKeyPress }) =>
   <input
-    type="text"
+    type="search"
     placeholder="Seach by file name... "
     value={searchTerm}
     onKeyPress={searchKeyPress}

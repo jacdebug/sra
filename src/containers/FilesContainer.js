@@ -64,9 +64,9 @@ class FilesContainer extends React.Component {
   searchKeyHandler(e) {
     let searchQuery = e.currentTarget.value;
     this.props.updateSearchTerm(searchQuery);
-    if (e.key === 'Enter') {
+    //if (e.key === 'Enter') {
       this.doFileSearch(searchQuery);
-    }
+    //}
   }
 
   render() {

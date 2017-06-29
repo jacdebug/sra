@@ -29,8 +29,8 @@ const files = (
     case 'FETCH_FILES':
       let form = {},
         parsed = queryString.parse(action.payload.params);
-      form.searchTerm = parsed.name_like;
-      form.sortBy = parsed._sort;
+      form.searchTerm = parsed.name_like || '';
+      form.sortBy = parsed._sort || 'id';
       return Object.assign({}, state, { form });
 
     case 'UPDATE_SEARCH_TERM':
