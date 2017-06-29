@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="sc-bdVaJa bmRMAg"
+>
+  <div
+    className="sc-bwzfXH yQIlD"
+  >
+    checking_account.m2a
+  </div>
+  <div>
+    Minima dolor et sequi dicta vitae possimus molestiae laborum quis.
+  </div>
+  <div
+    className="sc-htpNat cIzfuY"
+  >
+    <span>
+      #
+      0
+    </span>
+     |
+    <span>
+      1.9 GB
+    </span>
+     |
+    <span>
+      m2a
+    </span>
+     |
+    <span>
+      Sun Jan 22 2017 11:45:28
+    </span>
+  </div>
+</div>
+`;

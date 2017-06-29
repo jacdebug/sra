@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<input
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  placeholder="Seach by file name... "
+  type="search"
+  value="testval"
+/>
+`;

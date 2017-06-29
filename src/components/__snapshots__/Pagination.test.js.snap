@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<styled.div
+  left={true}
+>
+  <Styled(Link)
+    disabled={false}
+    to="/files?_page=1&name_like="
+  >
+    first
+  </Styled(Link)>
+  <Styled(Link)
+    disabled={true}
+    to="/files?"
+  >
+    prev
+  </Styled(Link)>
+  <Styled(Link)
+    disabled={false}
+    to="/files?_page=2&name_like="
+  >
+    next
+  </Styled(Link)>
+  <Styled(Link)
+    disabled={false}
+    to="/files?_page=100&name_like="
+  >
+    last
+  </Styled(Link)>
+</styled.div>
+`;

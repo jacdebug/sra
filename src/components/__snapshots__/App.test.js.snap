@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.png"
+    />
+  </div>
+  <div
+    className="App-intro"
+  >
+    <a
+      className={undefined}
+      href="/files"
+      onClick={[Function]}
+      style={undefined}
+    >
+      My Files
+    </a>
+  </div>
+</div>
+`;

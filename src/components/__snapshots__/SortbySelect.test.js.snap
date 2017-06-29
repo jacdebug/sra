@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<styled.div>
+  <label
+    htmlFor="sort-select"
+  >
+    Sort by: 
+  </label>
+  <select
+    id="sort-select"
+    onChange={[Function]}
+    value="id"
+  >
+    <option
+      value="id"
+    >
+      Id
+    </option>
+    <option
+      value="name"
+    >
+      Name
+    </option>
+    <option
+      value="size"
+    >
+      Size
+    </option>
+    <option
+      value="ext"
+    >
+      Ext
+    </option>
+    <option
+      value="created"
+    >
+      Created
+    </option>
+  </select>
+</styled.div>
+`;

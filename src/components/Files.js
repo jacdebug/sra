@@ -18,7 +18,9 @@ const Files = ({ files, ...otherProps }) =>
     </FlexContainer>
 
     <FileList>
-      {files.map((file, index) => <File key={index} file={file} />)}
+      {files.length
+        ? files.map((file, index) => <File key={index} file={file} />)
+        : <div>No files</div>}
     </FileList>
 
     <Pagination {...otherProps} />
