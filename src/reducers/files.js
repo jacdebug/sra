@@ -1,5 +1,6 @@
 import queryString from 'query-string';
 
+//we need to shoe links in ui even if it is not passed from api
 const generatePaginationLinksData = links =>
   ['first', 'prev', 'next', 'last'].map(type => {
     let linkData = (links && links[type]) || null;

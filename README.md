@@ -1,3 +1,5 @@
+### Feel free to reach me at jacob.deepak@yahoo.com for any questions
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). For a detailed README concerning the internal structure of the project, please refer to that repository.
 
 Below you will find some simple information about how to run the app and make changes.<br>
