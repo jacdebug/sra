@@ -3,7 +3,7 @@
 exports[`renders a snapshot 1`] = `
 <a
   className={undefined}
-  href="/files"
+  href="/files?_page=1"
   onClick={[Function]}
   style={undefined}
 >
